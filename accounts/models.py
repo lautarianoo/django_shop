@@ -41,6 +41,7 @@ class MyUser(AbstractBaseUser):
     status_email = models.BooleanField("Подтверждён Email", default=False)
     date_reg = models.DateTimeField("Дата регистрации", auto_now_add=True)
     is_admin = models.BooleanField("Админ", default=False)
+    banned = models.BooleanField("Забанен", default=False)
 
     object = MyUserManager()
 
