@@ -65,6 +65,7 @@ class CompanyManager(models.Manager):
         qs = self._queryset_class(self.model, using=self._db).select_related('user')
         return qs
 
+
 class CompanySeller(models.Model):
 
     STATUS_COMPANY = (
@@ -117,6 +118,7 @@ class CompanySeller(models.Model):
     @property
     def is_verify(self):
         return self.status == 1
+
 
 class ShippingAddress(models.Model):
 
