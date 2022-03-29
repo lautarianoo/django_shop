@@ -31,7 +31,15 @@ class Product(models.Model):
     description = models.TextField("Описание", max_length=2000)
     company = models.ForeignKey(CompanySeller, on_delete=models.CASCADE, related_name="products")
     quantity = models.IntegerField("Количество", default=0)
+    quantity_sell = models.IntegerField("Количество проданного", default=0)
     available = models.BooleanField("Есть в наличии", default=False)
+
+    def check_available(self):
+        if self.quantity == self.quantity_sell:
+            self.available = False
+            return False
+        self.available = True
+        return True
 
     def __str__(self):
         return f"{self.title} | {self.company}"

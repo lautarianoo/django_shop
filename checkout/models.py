@@ -12,12 +12,17 @@ class ApplyOrganization(models.Model):
     name_organization = models.CharField("Название организации", max_length=80)
     number_inn = models.CharField("Регистрационный номер организации", max_length=30)
     address = models.CharField("Адрес организации", max_length=80)
-    phone = models.CharField("Номер организации", max_length=18)
+    category = models.CharField(choices=CATEGORY_ORGANIZATION, max_length=18)
     accepted = models.BooleanField("Заявка принята", default=False)
     no_accepted = models.BooleanField("Заявка отклонена", default=False)
 
     def __str__(self):
         return f"{self.company.title} | {self.name_organization}"
+
+    def save(self, *args, **kwargs):
+        if self.accepted:
+            self.company.status = "Verify"
+        super().save(*args, **kwargs)
 
     class Meta:
         verbose_name = "Заявка на верификацию организации"
