@@ -22,6 +22,7 @@ class ApplyOrganization(models.Model):
     def save(self, *args, **kwargs):
         if self.accepted:
             self.company.status = "Verify"
+            self.company.save()
         super().save(*args, **kwargs)
 
     class Meta:

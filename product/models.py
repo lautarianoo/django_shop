@@ -35,7 +35,7 @@ class Product(models.Model):
     available = models.BooleanField("Есть в наличии", default=False)
 
     def check_available(self):
-        if self.quantity == self.quantity_sell:
+        if self.quantity <= self.quantity_sell:
             self.available = False
             return False
         self.available = True
