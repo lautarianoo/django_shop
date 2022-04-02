@@ -5,12 +5,6 @@ from customer.models import Customer
 
 class CartItem(models.Model):
 
-    cart = models.ForeignKey(
-        'Cart',
-        on_delete=models.CASCADE,
-        blank=True,
-        related_name='items'
-    )
     product = models.ForeignKey(
         Product,
         on_delete=models.CASCADE,
@@ -54,6 +48,11 @@ class Cart(models.Model):
     customer = models.OneToOneField(
         Customer,
         on_delete=models.CASCADE,
+        blank=True,
+        related_name='cart'
+    )
+    cart_items = models.ManyToManyField(
+        CartItem,
         blank=True,
         related_name='cart'
     )

@@ -6,7 +6,7 @@ from django.core import checks
 class Category(models.Model):
 
     title = models.CharField("Название категории", max_length=70)
-    slug = models.SlugField(max_length=70)
+    slug = models.SlugField(max_length=70, unique=True)
 
     def __str__(self):
         return self.title
@@ -61,3 +61,41 @@ class Product(models.Model):
             msg = "Class `{}` must implement a field named `quantity`."
             errors.append(checks.Error(msg.format(cls.__name__)))
         return errors
+
+class CategoryFeature(models.Model):
+
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.CASCADE,
+        related_name='features'
+    )
+    feature_name = models.CharField("Название характеристики", max_length=100, unique=True)
+    unit = models.CharField("Величина", max_length=13, help_text="Например: Герц")
+
+    def __str__(self):
+        return f"{self.feature_name} | {self.category.title}"
+
+    class Meta:
+        verbose_name = "Характеристика категории"
+        verbose_name_plural = "Характеристики категорий"
+
+class ProductFeature(models.Model):
+
+    product = models.ForeignKey(
+        Product,
+        on_delete=models.CASCADE,
+        related_name='features'
+    )
+    feature = models.ForeignKey(
+        CategoryFeature,
+        on_delete=models.CASCADE,
+        related_name='product_features'
+    )
+    value = models.CharField("Значение", max_length=30)
+
+    def __str__(self):
+        return f"Характеристика {self.product.title}"
+
+    class Meta:
+        verbose_name = "Характеристика продукта"
+        verbose_name_plural = "Характеристики продуктов"
