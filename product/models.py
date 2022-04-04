@@ -30,11 +30,19 @@ class Product(models.Model):
     )
     title = models.CharField("Название продукта", max_length=300)
     description = models.TextField("Описание", max_length=2000)
-    company = models.ForeignKey(CompanySeller, on_delete=models.CASCADE, related_name="products")
+    company = models.ForeignKey(
+        CompanySeller,
+        on_delete=models.CASCADE,
+        related_name="products",
+        blank=True
+    )
     price = models.IntegerField("Цена", default=0)
     quantity = models.IntegerField("Количество", default=0)
     quantity_sell = models.IntegerField("Количество проданного", default=0)
     available = models.BooleanField("Есть в наличии", default=False)
+    date_publication = models.DateTimeField(auto_now_add=True)
+    query_product = models.TextField("Запросы продуктов или категории",
+                                     blank=True, null=True)
 
     def check_available(self):
         if self.quantity <= self.quantity_sell:
