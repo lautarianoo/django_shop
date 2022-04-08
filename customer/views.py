@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from cart.models import Cart
 from django.views import View
 from .forms import LoginForm, RegistrationForm
+from customer.models import Customer
 
 class LoginView(View):
 
@@ -32,4 +33,9 @@ class RegistrationView(View):
         return render(request, 'customer/register.html', {'form': form})
 
     def post(self, request, *args, **kwargs):
-        pass
+        form = RegistrationForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            new_user = form.save(commit=False)
+            customer = Customer.objects.create(user=new_user, status="Unrecognized")
+            customer.save()
+            cart = Cart.objects.create()
