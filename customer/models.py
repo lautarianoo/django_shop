@@ -128,10 +128,14 @@ class ShippingAddress(models.Model):
     zip_code = models.CharField(
         "ZIP / Postal code",
         max_length=12,
+        blank=True,
+        null=True
     )
     city = models.CharField(
         "City",
         max_length=1024,
+        blank=True,
+        null=True
     )
     country = CountryField("Country")
 

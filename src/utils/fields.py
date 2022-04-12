@@ -7,6 +7,8 @@ class CountryField(models.CharField):
         defaults = {
             'max_length': 3,
             'choices': ISO_3166_CODES,
+            'blank': True,
+            'null': True
         }
         defaults.update(kwargs)
         super().__init__(*args, **defaults)

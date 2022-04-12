@@ -11,3 +11,4 @@ class ApplyOrganizationForm(forms.ModelForm):
         data = self.cleaned_data
         if ApplyOrganization.objects.filter(name_organization=data['name_organization']).exists():
             raise forms.ValidationError("Заявка на эту организацию уже подана")
+        return self.cleaned_data

@@ -116,7 +116,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
+SESSION_COOKIE_AGE = 400000
 
 STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')

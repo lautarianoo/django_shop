@@ -3,9 +3,10 @@ from django.shortcuts import render, redirect
 from cart.models import Cart
 from django.views import View
 from .forms import LoginForm, RegistrationForm
-from customer.models import Customer
+from customer.models import Customer, ShippingAddress
+from src.utils.mixins import CustomerMixin
 
-class LoginView(View):
+class LoginView(CustomerMixin, View):
 
     def get(self, request, *args, **kwargs):
         if request.user.is_authenticated:
@@ -40,7 +41,9 @@ class RegistrationView(View):
             customer.save()
             cart = Cart.objects.create(customer=customer)
             cart.save()
+            address = ShippingAddress.objects.create(customer=customer)
+            address.save()
             new_user.set_password(form.cleaned_data['password1'])
             new_user.save()
-            return redirect('catalog')
+            return redirect('login')
         return render(request, 'customer/register.html', {'form': form})
