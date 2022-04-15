@@ -2,9 +2,10 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 from cart.models import Cart
 from django.views import View
-from .forms import LoginForm, RegistrationForm
+from .forms import LoginForm, RegistrationForm, CreateCompanyForm
 from customer.models import Customer, ShippingAddress
 from src.utils.mixins import CustomerMixin
+from checkout.models import ApplyOrganization
 
 class LoginView(CustomerMixin, View):
 
@@ -47,3 +48,22 @@ class RegistrationView(View):
             new_user.save()
             return redirect('login')
         return render(request, 'customer/register.html', {'form': form})
+
+class CreateCompany(View):
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.STATUS_AUTH == "Recognized":
+            form = CreateCompanyForm()
+            return render(request, 'customer/create_company.html', {'form': form})
+        return redirect('catalog')
+
+    def post(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.STATUS_AUTH == "Recognized":
+            form = CreateCompanyForm(request.POST or None, request.FILES or None)
+            if form.is_valid():
+                new_company = form.save(commit=False)
+                new_company.STATUS_COMPANY = "No verify"
+                new_company.user = request.user
+                new_company.save()
+                return redirect('catalog')
+            return render(request, 'customer/register.html', {'form': form})

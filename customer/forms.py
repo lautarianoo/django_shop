@@ -1,5 +1,6 @@
 from django import forms
 from accounts.models import MyUser
+from .models import CompanySeller
 
 class LoginForm(forms.Form):
 
@@ -34,8 +35,20 @@ class RegistrationForm(forms.ModelForm):
             raise forms.ValidationError('Пароли не совпадают')
         return data['password2']
 
-    def clean_username(self):
+    def clean_email(self):
         data = self.cleaned_data
         if MyUser.objects.filter(username=data['email']).exists():
             raise forms.ValidationError('Пользователь с таким названием аккаунта уже существует.')
         return data['email']
+
+class CreateCompanyForm(forms.ModelForm):
+
+    class Meta:
+        model = CompanySeller
+        fields = ('title', 'phone', 'logo', )
+
+    def clean_title(self, *args, **kwargs):
+        title = self.cleaned_data['title']
+        if CompanySeller.objects.filter(title=title).exists():
+            raise forms.ValidationError('Данная компания уже существует')
+        return title
