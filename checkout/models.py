@@ -13,6 +13,7 @@ class ApplyOrganization(models.Model):
     number_inn = models.CharField("Регистрационный номер организации", max_length=30)
     address = models.CharField("Адрес организации", max_length=80)
     category = models.CharField(choices=CATEGORY_ORGANIZATION, max_length=18)
+    date_publish = models.DateTimeField(auto_now_add=True)
     accepted = models.BooleanField("Заявка принята", default=False)
     no_accepted = models.BooleanField("Заявка отклонена", default=False)
 

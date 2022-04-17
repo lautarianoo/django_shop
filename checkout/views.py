@@ -3,6 +3,7 @@ from django.views import View
 from .forms import ApplyOrganizationForm
 from .models import ApplyOrganization
 from src.email import generate_code_email, send_email
+from customer.models import CompanySeller
 
 class SendCodeCustomer(View):
 
@@ -23,4 +24,26 @@ class VerifyCustomer(View):
             if request.POST.get('code') == request.session['code']:
                 user.STATUS_AUTH = "Recognized"
                 user.save()
+        return redirect('catalog')
+
+class VerifyCompany(View):
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.STATUS_AUTH == "Recognized":
+            form = ApplyOrganizationForm()
+            applications = ApplyOrganization.objects.filter(company=CompanySeller.objects.filter(id=kwargs.get('id'))[0])
+            return render(request, 'checkout/verify_company.html', {'form': form, 'applications': applications})
+        return redirect('catalog')
+
+    def post(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.STATUS_AUTH == "Recognized":
+            form = ApplyOrganizationForm(request.POST)
+            if form.is_valid():
+                new_application = form.save(commit=False)
+                new_application.company = CompanySeller.objects.filter(id=kwargs.get('id'))[0]
+                new_application.save()
+                return redirect('catalog')
+            applications = ApplyOrganization.objects.filter(
+                company=CompanySeller.objects.filter(id=kwargs.get('id'))[0])
+            return render(request, 'checkout/verify_company.html', {'form': form, 'applications': applications})
         return redirect('catalog')
