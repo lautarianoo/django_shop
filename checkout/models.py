@@ -15,6 +15,8 @@ class ApplyOrganization(models.Model):
     category = models.CharField(choices=CATEGORY_ORGANIZATION, max_length=18)
     date_publish = models.DateTimeField(auto_now_add=True)
     accepted = models.BooleanField("Заявка принята", default=False)
+    admin_text = models.TextField("Сообщение принятия/отклонения заявки", max_length=2000,
+                                  blank=True, null=True)
     no_accepted = models.BooleanField("Заявка отклонена", default=False)
 
     def __str__(self):

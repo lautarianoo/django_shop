@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.views import View
-from .forms import ApplyOrganizationForm
+from .forms import ApplyOrganizationForm, AdminEditApplicationForm
 from .models import ApplyOrganization
 from src.email import generate_code_email, send_email
 from customer.models import CompanySeller
@@ -47,3 +47,11 @@ class VerifyCompany(View):
                 company=CompanySeller.objects.filter(id=kwargs.get('id'))[0])
             return render(request, 'checkout/verify_company.html', {'form': form, 'applications': applications})
         return redirect('catalog')
+
+class AdminEditApplication(View):
+
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated and request.user.is_admin:
+            form = AdminEditApplicationForm()
+            application = ApplyOrganization.objects.filter(id=kwargs.get('id'))
+            return render(request, 'checkout/edit_application.html', {'form': form, "application": application})

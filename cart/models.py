@@ -5,7 +5,7 @@ from customer.models import Customer
 
 class CartItem(models.Model):
 
-    product = models.ForeignKey(
+    product = models.OneToOneField(
         Product,
         on_delete=models.CASCADE,
         blank=True,
@@ -65,3 +65,10 @@ class Cart(models.Model):
 
     def __str__(self):
         return f"Корзина {self.customer.user.email}"
+
+    def save(self, *args, **kwargs):
+        price = 0
+        for item in self.cart_items.all():
+            price+=item.total_price
+        self.total_price = price
+        return super().save(*args, **kwargs)
