@@ -43,6 +43,7 @@ class Product(models.Model):
     date_publication = models.DateTimeField(auto_now_add=True)
     query_product = models.TextField("Запросы продуктов или категории",
                                      blank=True, null=True)
+    article = models.IntegerField("Артикль", default=0)
 
     def check_available(self):
         if self.quantity <= self.quantity_sell:
@@ -50,6 +51,11 @@ class Product(models.Model):
             return False
         self.available = True
         return True
+
+    def save(self, *args , **kwargs):
+        if not self.article:
+            self.article = self.id + 1
+        return super().save(*args, **kwargs)
 
     def __str__(self):
         return f"{self.title} | {self.company}"
