@@ -23,3 +23,6 @@ class CreateProduct(CompanyMixin, View):
         company = request.user.company
         form = ProductForm()
         return render(request, 'product/create_product.html', {'form': form, 'company': company})
+
+    def post(self, request, *args, **kwargs):
+        pass
