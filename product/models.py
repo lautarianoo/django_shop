@@ -19,6 +19,18 @@ class Category(models.Model):
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
 
+class CustomImage(models.Model):
+
+    image = models.ImageField()
+    slug = models.SlugField(unique=True)
+
+    def __str__(self):
+        return f"{self.slug}"
+
+    class Meta:
+        verbose_name="Изображения"
+        verbose_name_plural="Изображении"
+
 class Product(models.Model):
 
     category = models.ForeignKey(
@@ -35,6 +47,11 @@ class Product(models.Model):
         on_delete=models.CASCADE,
         related_name="products",
         blank=True
+    )
+    image = models.ManyToManyField(
+        CustomImage,
+        blank=True,
+        related_name='products'
     )
     price = models.IntegerField("Цена", default=0)
     quantity = models.IntegerField("Количество", default=0)
