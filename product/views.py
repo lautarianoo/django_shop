@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views import View
 from customer.models import Customer, VisitingCustomer
 from .models import Category, Product
@@ -25,4 +25,11 @@ class CreateProduct(CompanyMixin, View):
         return render(request, 'product/create_product.html', {'form': form, 'company': company})
 
     def post(self, request, *args, **kwargs):
-        pass
+        form = ProductForm(request.POST or None, request.FILES or None)
+        company = request.user.company
+        if form.is_valid():
+            new_product = form.save(commit=False)
+            new_product.company = company
+            new_product.save()
+            return redirect('catalog')
+        return render(request, 'product/create_product.html', {'form': form, 'company': company})

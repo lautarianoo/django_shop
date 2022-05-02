@@ -60,6 +60,7 @@ class Product(models.Model):
     date_publication = models.DateTimeField(auto_now_add=True)
     query_product = models.TextField("Запросы продуктов или категории",
                                      blank=True, null=True)
+    published = models.BooleanField(default=False)
     article = models.IntegerField("Артикль", default=0)
 
     def check_available(self):
