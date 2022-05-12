@@ -13,8 +13,8 @@ class CatalogView(View):
             customer = Customer.objects.filter(user=request.user)[0]
             qs = rec_catalog(customer)
         else:
-            qs = Product.objects.all()[40]
-        categories = Category.objects.all()
+            qs = Product.objects.all()[:40]
+        categories = Category.objects.all()[:5]
         return render(request, 'product/catalog.html', {'products': qs, 'categories': categories})
 
 class CreateProduct(CompanyMixin, View):

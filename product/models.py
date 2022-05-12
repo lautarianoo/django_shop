@@ -61,6 +61,7 @@ class Product(models.Model):
     query_product = models.TextField("Запросы продуктов или категории",
                                      blank=True, null=True)
     published = models.BooleanField(default=False)
+    sale_percent = models.IntegerField("Скидка", default=0)
     article = models.IntegerField("Артикль", default=0)
 
     def check_available(self):
@@ -69,6 +70,9 @@ class Product(models.Model):
             return False
         self.available = True
         return True
+
+    def price_before_sale(self):
+        return self.price - (self.price * self.sale_percent)
 
     def save(self, *args , **kwargs):
         if not self.article:
