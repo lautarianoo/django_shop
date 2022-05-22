@@ -3,6 +3,7 @@ from django.views import View
 from customer.models import ShippingAddress
 from cart.models import Cart
 from customer.models import CompanySeller
+from product.models import Product
 
 class CustomerMixin(View):
 

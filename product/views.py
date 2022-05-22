@@ -41,4 +41,10 @@ class AddFeatureProduct(CompanyMixin, View):
         return render(request, 'product/product_feature.html', {'form': form})
 
     def post(self, request, *args, **kwargs):
-        pass
+        if Product.objects.filter(id=kwargs.get('id')) == request.user.company:
+            form = ProductFeatureForm(request.POST or None)
+            if form.is_valid():
+                form.save()
+                return redirect('catalog')
+            return render(request, 'product/create_product.html', {'form': form})
+        return render(request, 'product/create_product.html', {})
