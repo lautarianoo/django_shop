@@ -1,0 +1,51 @@
+footer {
+    display: block;
+}
+
+address {
+    display: block;
+    margin-bottom: 30px;
+    font-style: normal;
+    line-height: 1.42857143;
+}
+
+
+.footer-section {
+    position: relative;
+    margin-top: 30px;
+}
+
+.raddan-footer {
+    box-shadow: 0 0 10px rgb(0 0 0);
+    padding: 70px 50px 40px 50px;
+    background-color: #ffffff;
+}
+
+.footer-logo {
+    margin-bottom: 10%;
+}
+
+.footer-copyright {
+    padding: 35px 0;
+    text-align: center;
+}
+
+.footer-about-text {
+    margin-bottom: 30px;
+    color: #8996A8;
+}
+
+.icon-position {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 25px;
+    padding-top: 7px;
+}
+
+.info-wrapper {
+    line-height: 25px;
+    font-size: xx-large;
+    overflow: hidden;
+}
+
