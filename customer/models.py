@@ -138,7 +138,7 @@ class Customer(models.Model):
     user = models.OneToOneField(
         ShopUser, verbose_name="Юзер",
         on_delete=models.CASCADE,
-        related_name="customer"\
+        related_name="customer"
     )
     status = models.CharField(verbose_name="Статус покупателя", choices=STATUS_AUTH, max_length=20)
     point_issue = models.ForeignKey(
