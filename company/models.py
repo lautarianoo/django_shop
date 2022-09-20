@@ -1,3 +1,8 @@
+import sys
+from io import BytesIO
+
+from PIL import Image
+from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
 from customer.models import ShopUser
 
@@ -30,8 +35,10 @@ class CompanySeller(models.Model):
     )
     title = models.CharField("Название компании", max_length=50)
     phone = models.CharField("Телефон компании", blank=True, null=True, max_length=16)
+    rating_product = models.FloatField("Рейтинг продуктов", default=0.0)
     logo = models.ImageField("Логотип компании", blank=True)
     date_reg = models.DateTimeField(auto_now_add=True)
+    premium_seller = models.BooleanField("Премиум продавец", default=False)
     objects = CompanyManager()
 
     class Meta:
