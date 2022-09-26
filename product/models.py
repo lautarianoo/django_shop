@@ -1,5 +1,6 @@
 from django.db import models
 from company.models import CompanySeller
+from src.utils.translation import russian_to_engilsh
 
 
 class SubCategory(models.Model):
@@ -17,6 +18,7 @@ class SubCategory(models.Model):
 class Category(models.Model):
 
     name = models.CharField("Наименование категории", max_length=30)
+    image = models.ImageField(verbose_name="Изображение категории")
     subcategory = models.ForeignKey(
         SubCategory,
         verbose_name="Подкатегория",
@@ -36,6 +38,7 @@ class Category(models.Model):
 
 class ProductImage(models.Model):
 
+    image = models.ImageField(verbose_name="Изображение")
     slug = models.SlugField(unique=True)
 
     def __str__(self):
@@ -72,9 +75,9 @@ class Product(models.Model):
     query_product = models.TextField("Запросы продуктов или категории",
                                      blank=True, null=True)
     published = models.BooleanField(default=False)
+    slug = models.SlugField(verbose_name="Слаг", unique=True)
     sale=models.BooleanField(verbose_name="Распродажа", default=False)
     sale_percent = models.IntegerField("Скидка", default=0)
-    article = models.IntegerField("Артикль", default=0)
 
     def __str__(self):
         return f"{self.category.name} | {self.title} | {self.seller.title}"
@@ -83,4 +86,10 @@ class Product(models.Model):
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
 
-    
+    def save(self, *args, **kwargs):
+        if self.sale:
+            self.price = self.price * (self.sale_percent / 100)
+        if self.quantity == self.quantity_sell or self.quantity == 0:
+            self.available = False
+        self.slug = f"{russian_to_engilsh(self.title)}-{self.id}"
+        super().save(*args, *kwargs)
