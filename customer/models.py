@@ -149,6 +149,7 @@ class Customer(models.Model):
         null=True,
         related_name="customer"
     )
+    product_query = models.TextField(verbose_name="Запросы продуктов", max_length=5000)
 
     class Meta:
         verbose_name='Покупатель'

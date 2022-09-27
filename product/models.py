@@ -6,6 +6,7 @@ from src.utils.translation import russian_to_engilsh
 class SubCategory(models.Model):
 
     name = models.CharField("Наименование подкатегории", max_length=30)
+    image = models.ImageField(verbose_name="Изображение категории")
     slug = models.SlugField("Слаг", max_length=30)
 
     def __str__(self):
@@ -18,7 +19,6 @@ class SubCategory(models.Model):
 class Category(models.Model):
 
     name = models.CharField("Наименование категории", max_length=30)
-    image = models.ImageField(verbose_name="Изображение категории")
     subcategory = models.ForeignKey(
         SubCategory,
         verbose_name="Подкатегория",
