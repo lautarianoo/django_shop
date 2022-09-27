@@ -93,3 +93,36 @@ class Product(models.Model):
             self.available = False
         self.slug = f"{russian_to_engilsh(self.title)}-{self.id}"
         super().save(*args, *kwargs)
+
+class Feature(models.Model):
+
+    title = models.CharField(verbose_name="Наименование характеристики", max_length=40)
+    value = models.CharField(verbose_name="Значение", max_length=30)
+    unit = models.CharField(verbose_name="Единица измерение (Гц, кг и т.д.)", max_length=10)
+
+    class Meta:
+        abstract = True
+
+class CategoryFeature(Feature):
+
+    categories = models.ManyToManyField(Category, verbose_name="Категория", related_name="feature",
+                                        blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name="Характиерстика категорий"
+        verbose_name_plural = "Характеристики категорий"
+
+class ProductFeature(Feature):
+
+    products = models.ManyToManyField(Product, verbose_name="Продукт(ы)", related_name="feature",
+                                      blank=True)
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name="Характиерстика продукта"
+        verbose_name_plural = "Характеристики продуктов"
