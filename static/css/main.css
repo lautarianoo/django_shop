@@ -1,5 +1,13 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	min-width: 1000px;
+	font-family: Arial;
+}
 
 
 .header-tezone {
-        background: linear-gradient(to right,#cb11ab 0,#481173 100%) no-repeat;
+        display: block;
+        background-color: black;
+        height: 100px;
 }
