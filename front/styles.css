@@ -1,0 +1,72 @@
+
+.header-tezone {
+	display: block;
+	color: white;
+	padding: 10px;
+	background: linear-gradient(to right,#870000 0,#190A05 100%) no-repeat;
+	height: 30%;
+}
+
+.header-tezone-top  {
+	display: flex;
+	justify-content: space-between;
+	font-size: small;
+	font-weight: bold;
+	color: #bdbdbd;
+}
+
+
+ul.ul-tezone {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   ul.ul-tezone li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 15px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+   }
+
+.btn-tezone {
+	float: right;
+  color: #fff;
+  font-size: small;
+  font-weight: bold;
+  background-color: #FF4500	;
+  border-color: #FF4500	;
+}
+
+.btn-tezone:hover {
+  color: #fff;
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.btn-tezone:focus, .btn-tezone.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-tezone.disabled, .btn-tezone:disabled {
+  color: #fff;
+  background-color: #FF4500	;
+  border-color: #FF4500	;
+}
+
+.btn-tezone:not(:disabled):not(.disabled):active, .btn-tezone:not(:disabled):not(.disabled).active,
+.show > .btn-tezone.dropdown-toggle {
+  color: #fff;
+  background-color: #FF4500;
+  border-color: #FF4500;
+}
+
+.btn-tezone:not(:disabled):not(.disabled):active:focus, .btn-tezone:not(:disabled):not(.disabled).active:focus,
+.show > .btn-tezone.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.header-tezone-bottom {
+
+}
+
+.tezone-text-name {
+	
+}
