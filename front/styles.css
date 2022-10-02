@@ -3,8 +3,8 @@
 	display: block;
 	color: white;
 	padding: 10px;
-	background: linear-gradient(to right,#870000 0,#190A05 100%) no-repeat;
-	height: 30%;
+	background: linear-gradient(to right,#2BC0E4 0,#EAECC6 100%) no-repeat;
+	height: 22%;
 }
 
 .header-tezone-top  {
@@ -15,6 +15,12 @@
 	color: #bdbdbd;
 }
 
+.city-location-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-bottom: 5px;
+}
 
 ul.ul-tezone {
     margin: 0; /* Обнуляем значение отступов */
@@ -29,16 +35,16 @@ ul.ul-tezone {
 .btn-tezone {
 	float: right;
   color: #fff;
-  font-size: small;
+  font-size: medium;
   font-weight: bold;
-  background-color: #FF4500	;
-  border-color: #FF4500	;
+  background-color: #2BC0E4	;
+  border-color: #2BC0E4	;
 }
 
 .btn-tezone:hover {
   color: #fff;
-  background-color: #FF4500;
-  border-color: #FF4500;
+  background-color: #2BC0E4;
+  border-color: #2BC0E4;
 }
 
 .btn-tezone:focus, .btn-tezone.focus {
@@ -47,15 +53,15 @@ ul.ul-tezone {
 
 .btn-tezone.disabled, .btn-tezone:disabled {
   color: #fff;
-  background-color: #FF4500	;
-  border-color: #FF4500	;
+  background-color: #2BC0E4	;
+  border-color: #2BC0E4	;
 }
 
 .btn-tezone:not(:disabled):not(.disabled):active, .btn-tezone:not(:disabled):not(.disabled).active,
 .show > .btn-tezone.dropdown-toggle {
   color: #fff;
-  background-color: #FF4500;
-  border-color: #FF4500;
+  background-color: #2BC0E4;
+  border-color: #2BC0E4;
 }
 
 .btn-tezone:not(:disabled):not(.disabled):active:focus, .btn-tezone:not(:disabled):not(.disabled).active:focus,
@@ -64,9 +70,72 @@ ul.ul-tezone {
 }
 
 .header-tezone-bottom {
+  margin-top: 50px;
+}
+
+.block-main-search {
+  position: relative;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.block-main-search i {
+  position: absolute;
+  left: 8px;
+  bottom: 20px;
+  padding-top: 2px;
+  padding-left: 25px;
+}
+
+
+.main-search {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-transition: background .3s ease 0s;
+  transition: background .3s ease 0s;
+  color: rgba(255,255,255, .5);
+  width: 95%;
+  padding: 16px 120px 16px 55px;
+  border-radius: 60px;
+  border: 0px;
+  margin: 0;
+  margin-left: 15px;
+  outline: none;
+  background: rgba(255,255,255, .2);
+  cursor: pointer;
 
 }
 
-.tezone-text-name {
-	
+
+.main-search:focus, .main-search:focus:hover {
+    color: #242424;
+    background: #fff;
+    border: 0px;
+}
+
+.main-search:focus {
+    cursor: text;
+    border: 0px;
+}
+
+.nav-elements {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dropdown-nav-btn {
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255,255,255, .2);
+  padding: 2px 9px;
+  margin-right: 7px;
+}
+
+.dropdown-image {
+  height: 30px;
+  width: 30px;
 }
