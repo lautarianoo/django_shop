@@ -139,3 +139,31 @@ ul.ul-tezone {
   height: 30px;
   width: 30px;
 }
+
+.navbar-items-cc {
+  display: flex;
+}
+
+.navbar-item-cc {
+  position: relative;
+  margin-left: 32px;
+}
+
+.navbar-cc__link {
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba(130,73,83,.6);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: color .3s ease 0s;
+    transition: color .3s ease 0s;
+}
+
+.navar-cc__icon {
+  display: block;
+  height: 27px;
+  margin: 0 auto 6px;
+  position: relative;
+  width: 27px;
+}
