@@ -17,5 +17,5 @@ class MainPageView(CustomerMixin, View):
                         query.append(product[1])
                         query.append(product[2])
         else:
-            query = Product.objects.all()[:20]
+            query = Product.objects.filter(tezone_recommended=True)[:25]
         return render(request, 'product/main_page.html', {'sub_categories': sub_categories, 'rec_product': query[:20]})
