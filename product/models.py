@@ -78,6 +78,7 @@ class Product(models.Model):
     slug = models.SlugField(verbose_name="Слаг", unique=True)
     sale=models.BooleanField(verbose_name="Распродажа", default=False)
     sale_percent = models.IntegerField("Скидка", default=0)
+    tezone_recommended = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.category.name} | {self.title} | {self.seller.title}"
