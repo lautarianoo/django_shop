@@ -1,0 +1,247 @@
+
+body, html {
+    height: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a:active,
+a:hover,
+a {
+  text-decoration: none;
+  color:#ff0000;
+}
+
+.header-tezone {
+	display: block;
+	color: white;
+	padding: 10px;
+	background: linear-gradient(to right,#2BC0E4 0,#EAECC6 100%) no-repeat;
+	height: 22vh;
+}
+
+.header-tezone-top  {
+	display: flex;
+	justify-content: space-between;
+	font-size: small;
+	font-weight: bold;
+	color: #bdbdbd;
+}
+
+.city-location-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
+  margin-bottom: 5px;
+}
+
+ul.ul-tezone {
+    margin: 0; /* Обнуляем значение отступов */
+    padding: 4px; /* Значение полей */
+   }
+   ul.ul-tezone li {
+    display: inline; /* Отображать как строчный элемент */
+    margin-right: 15px; /* Отступ слева */
+    padding: 3px; /* Поля вокруг текста */
+   }
+
+.btn-tezone {
+	float: right;
+  color: #fff;
+  font-size: medium;
+  font-weight: bold;
+  background-color: #2BC0E4	;
+  border-color: #2BC0E4	;
+}
+
+.btn-tezone:hover {
+  color: #fff;
+  background-color: #2BC0E4;
+  border-color: #2BC0E4;
+}
+
+.btn-tezone:focus, .btn-tezone.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn-tezone.disabled, .btn-tezone:disabled {
+  color: #fff;
+  background-color: #2BC0E4	;
+  border-color: #2BC0E4	;
+}
+
+.btn-tezone:not(:disabled):not(.disabled):active, .btn-tezone:not(:disabled):not(.disabled).active,
+.show > .btn-tezone.dropdown-toggle {
+  color: #fff;
+  background-color: #2BC0E4;
+  border-color: #2BC0E4;
+}
+
+.btn-tezone:not(:disabled):not(.disabled):active:focus, .btn-tezone:not(:disabled):not(.disabled).active:focus,
+.show > .btn-tezone.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.header-tezone-bottom {
+  margin-top: 50px;
+}
+
+.block-main-search {
+  position: relative;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.block-main-search i {
+  position: absolute;
+  left: 8px;
+  bottom: 20px;
+  padding-top: 2px;
+  padding-left: 25px;
+}
+
+
+.main-search {
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  -webkit-transition: background .3s ease 0s;
+  transition: background .3s ease 0s;
+  color: rgba(255,255,255, .5);
+  width: 95%;
+  padding: 16px 120px 16px 55px;
+  border-radius: 60px;
+  border: 0px;
+  margin: 0;
+  margin-left: 15px;
+  outline: none;
+  background: rgba(255,255,255, .2);
+  cursor: pointer;
+
+}
+
+
+.main-search:focus, .main-search:focus:hover {
+    color: #242424;
+    background: #fff;
+    border: 0px;
+}
+
+.main-search:focus {
+    cursor: text;
+    border: 0px;
+}
+
+.nav-elements {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.dropdown-nav-btn {
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255,255,255, .2);
+  padding: 2px 9px;
+  margin-right: 7px;
+}
+
+.dropdown-image {
+  height: 30px;
+  width: 30px;
+}
+
+.navbar-items-cc {
+  display: flex;
+}
+
+.navbar-item-cc {
+  position: relative;
+  margin-left: 32px;
+}
+
+.navbar-cc__link {
+    font-size: 15px;
+    line-height: 25px;
+    color: rgba(130,73,83,.6);
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    -webkit-transition: color .3s ease 0s;
+    transition: color .3s ease 0s;
+}
+
+.navar-cc__icon {
+  display: block;
+  height: 27px;
+  margin: 0 auto 6px;
+  position: relative;
+  width: 27px;
+}
+
+
+.footer-tezone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  padding: 28px 0 48px;
+  margin: 38px 0 0;
+  color: #fff;
+  background: linear-gradient(to right,#7474BF 0,#348AC7 100%) no-repeat;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+}
+
+
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+}
+
+.copyright {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto;
+  width: 100%;
+  height: 20%;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(255,255,255,.7);
+  text-align: center;
+}
+
+.footer__header {
+    margin: 0 0 12px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.main-tezone {
+    min-height: calc(100vh - 22vh);
+}
+
+.ul-footer {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255,255,255,.7);
+}
+
+.ul-footer-item {
+  margin-top: 15px;
+}
