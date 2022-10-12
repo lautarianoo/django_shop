@@ -155,7 +155,7 @@ class Customer(models.Model):
         verbose_name='Покупатель'
         verbose_name_plural='Покупатели'
 
-    object = CustomerManager()
+    objects = CustomerManager()
 
     def __str__(self):
         return self.user.email

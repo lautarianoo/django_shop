@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Интернет магазин TEZONE - Главная{% endblock title %}</title>
+    <title>{% block title %}{% endblock title %}</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}">
 </head>
 <body>
+    <div class="wrapper-tezone">
         <header>
             <div class="header-tezone">
                 <div class="container">
@@ -81,12 +82,11 @@
             </div>
         </header>
         <main>
-            {% block tezone-content  %}
-                <div class="container main-tezone">
+            <div class="main-tezone">
+                {% block tezone-content  %}
 
-                </div>
-            {% endblock tezone-content %}
-
+                {% endblock tezone-content %}
+            </div>
         </main>
             <footer class="footer-tezone">
                 <div class="container">
@@ -128,6 +128,7 @@
                     </div>    
                 </div>    
             </footer>
-        <script src="{% static "js/main.js" %}"></script>
+    </div>
+<script src="{% static "js/main.js" %}"></script>
 </body>
 </html>

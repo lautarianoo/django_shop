@@ -7,9 +7,9 @@ class MainPageView(CustomerMixin, View):
 
     def get(self, request, *args, **kwargs):
         sub_categories = SubCategory.objects.all()
-        if request.user.is_authenticated and request.user.query_product:
+        if request.user.is_authenticated and request.user.customer.product_query:
             query = []
-            for text in request.user.query_product.split(" "):
+            for text in request.user.customer.product_query.split(" "):
                 for _ in range(2):
                     product = Product.objects.filter(title__icontains=text).order_by('?')
                     if product not in query:
@@ -17,5 +17,5 @@ class MainPageView(CustomerMixin, View):
                         query.append(product[1])
                         query.append(product[2])
         else:
-            query = Product.objects.filter(tezone_recommended=True)[:25]
-        return render(request, 'product/main_page.html', {'sub_categories': sub_categories, 'rec_product': query[:20]})
+            query = Product.objects.filter(tezone_recommended=True)[:50]
+        return render(request, 'product/main_page.html', {'sub_categories': sub_categories, 'rec_product': query[:40]})

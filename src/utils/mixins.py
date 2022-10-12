@@ -5,7 +5,7 @@ class CustomerMixin(View):
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            if not request.user.сustomer:
-                new_customer = Customer.object.create(user=request.user, status=1)
+            if not Customer.objects.filter(user=request.user):
+                new_customer = Customer.objects.create(user=request.user, status=1)
                 new_customer.save()
         return super().dispatch(request, *args, **kwargs)

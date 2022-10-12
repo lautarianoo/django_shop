@@ -1,4 +1,9 @@
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body, html {
     height: 100%;
 }
@@ -14,6 +19,12 @@ a:hover,
 a {
   text-decoration: none;
   color:#ff0000;
+}
+
+.wrapper-tezone {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
 }
 
 .header-tezone {
@@ -191,7 +202,7 @@ ul.ul-tezone {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 50%;
+  height: 50vh;
   padding: 28px 0 48px;
   margin: 38px 0 0;
   color: #fff;
@@ -233,7 +244,9 @@ ul.ul-tezone {
 }
 
 .main-tezone {
-    min-height: calc(100vh - 22vh);
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
 }
 
 .ul-footer {
@@ -244,4 +257,10 @@ ul.ul-tezone {
 
 .ul-footer-item {
   margin-top: 15px;
+}
+
+.main-page-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
