@@ -38,10 +38,21 @@ class MyUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
+class City(models.Model):
+
+    name = models.CharField("Название города", max_length=50)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name="Город"
+        verbose_name_plural="Города"
+
 class PountIssue(models.Model):
     '''Адрес пункта выдачи'''
 
-    city = CityField()
+    city = models.ForeignKey(City, verbose_name="Город", on_delete=models.CASCADE, related_name="points")
     address = models.CharField(verbose_name="Адрес пункта выдачи", max_length=120)
     zip_code = models.CharField(
         "ZIP code",
@@ -69,11 +80,11 @@ class ShopUser(AbstractBaseUser):
     first_name = models.CharField(verbose_name="Имя", max_length=40)
     last_name = models.CharField(verbose_name="Фамилия", max_length=45)
     email = models.EmailField(verbose_name="Почта", unique=True)
-    phone = models.CharField(verbose_name="Номер телефона", max_length=10, blank=True, null=True, unique=True)
+    phone = models.CharField(verbose_name="Номер телефона", max_length=14, blank=True, null=True, unique=True)
     date_reg = models.DateTimeField(verbose_name="Дата регистрации", auto_now_add=True)
     avatar = models.ImageField(verbose_name="Аватар")
     status_email = models.BooleanField(default=False)
-    city = CityField()
+    city = models.ForeignKey(City, verbose_name="Город", on_delete=models.SET_NULL, related_name="users", null=True)
     is_admin = models.BooleanField(default=False)
     full_name = models.CharField(verbose_name="ФИО", max_length=85)
 
@@ -130,9 +141,9 @@ class CustomerManager(models.Manager):
 class Customer(models.Model):
 
     STATUS_AUTH = (
-        (0, "Unrecognized"),
-        (1, "Recognized"),
-        (2, "Is staff"),
+        ("0", "Unrecognized"),
+        ("1", "Recognized"),
+        ("2", "Is staff"),
     )
 
     user = models.OneToOneField(

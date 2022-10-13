@@ -247,6 +247,7 @@ ul.ul-tezone {
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+    margin-top: 30px;
 }
 
 .ul-footer {

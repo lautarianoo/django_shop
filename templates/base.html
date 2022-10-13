@@ -26,8 +26,11 @@
                         <div class="header-tezone-top">
                             <ul class="ul-tezone" style="list-style-type: none;">
                                 {% if request.user.is_authenticated %}
-                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.point_issue.city }}</a></li>
-                                    <li><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.point_issue.address }}</a></li>
+                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.city }}</a></li>
+                                    <li><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.customer.point_issue.address }}</a></li>
+                                {% elif request.user.is_authenticated and not request.user.customer.point_issue %}
+                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.city }}</a></li>
+                                    <li><a href="#" style="text-decoration: none; color: #fff2f2;">Выберите пункт выдачи</a></li>
                                 {% else %}
                                     <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">Город</a></li>
                                 {% endif %}

@@ -12,10 +12,11 @@ class MainPageView(CustomerMixin, View):
             for text in request.user.customer.product_query.split(" "):
                 for _ in range(2):
                     product = Product.objects.filter(title__icontains=text).order_by('?')
-                    if product not in query:
-                        query.append(product[0])
-                        query.append(product[1])
-                        query.append(product[2])
+                    if product:
+                        if product[0] not in query and product[1] not in query and product[2] not in query:
+                            query.append(product[0])
+                            query.append(product[1])
+                            query.append(product[2])
         else:
             query = Product.objects.filter(tezone_recommended=True)[:50]
         return render(request, 'product/main_page.html', {'sub_categories': sub_categories, 'rec_product': query[:40]})
