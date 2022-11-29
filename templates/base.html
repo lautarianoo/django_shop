@@ -22,7 +22,7 @@
     <div class="wrapper-tezone">
         <header>
             <div class="header-tezone">
-                <div class="container">
+                <div class="my_container">
                         <div class="header-tezone-top">
                             <ul class="ul-tezone" style="list-style-type: none;">
                                 {% if request.user.is_authenticated %}
@@ -38,22 +38,16 @@
                             <a href="#" class="btn btn-tezone">Продавайте на TEZONE</a>
                         </div>
                     <div class="header-tezone-bottom">
-                        <div class="row">
-                            <div class="col-2">
                                 <div class="nav-elements">
                                     <button type="button" class="dropdown-nav-btn">
                                         <img class="dropdown-image" src="{% static "images/main-dropdown.png" %}">
                                     </button>
-                                    <h1 style="margin-left: 10px; margin-right: 10px;" class="tezone-text-name">TEZONE</h1>
-                                </div>                              
-                            </div>
-                            <div class="col-8">
-                                <div class="block-main-search">
+                                    <h1 style="margin-left: 10px; margin-right: 10px; margin-bottom: 0;" class="tezone-text-name">TEZONE</h1>
+                                </div>
+                                <div class="block-main-search" style="width: 100%">
                                     <input style="border: 0px;" class="main-search" type="text" name="main-search" placeholder="Искать..">
                                     <i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i>
-                                </div>  
-                            </div>
-                            <div class="col-2">
+                                </div>
                                 <div class="navbar-items-cc">
                                     <div style="margin-left: 5px" class="navbar-item-cc">
                                         <a class="navbar-cc__link" href="#">
@@ -77,12 +71,10 @@
                                             Корзина
                                         </a>
                                     </div>       
-                                </div>    
-                            </div> 
+                                </div>
                         </div>    
                     </div>
                 </div>
-            </div>
         </header>
         <main>
             <div class="main-tezone">
@@ -92,7 +84,7 @@
             </div>
         </main>
             <footer class="footer-tezone">
-                <div class="container">
+                <div class="my_container">
                     <div class="main-footer">
                         <div class="main-footer__ul">
                             <h5 class="footer-header">Компания</h5>

@@ -1,7 +1,9 @@
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Circe,sans-serif!important;
+    -webkit-font-smoothing: antialiased;
 }
 
 body, html {
@@ -19,6 +21,16 @@ a:hover,
 a {
   text-decoration: none;
   color:#ff0000;
+}
+
+.my_container {
+    width: 100%;
+    max-width: 1255px;
+    margin: 0 auto;
+    padding: 0 15px;
+    font-family: "Circe",sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .wrapper-tezone {
@@ -98,6 +110,9 @@ ul.ul-tezone {
 }
 
 .header-tezone-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 50px;
 }
 
@@ -105,6 +120,7 @@ ul.ul-tezone {
   position: relative;
   box-sizing: border-box;
   outline: 0;
+  width: 100%;
 }
 
 .block-main-search i {
@@ -178,7 +194,8 @@ ul.ul-tezone {
 }
 
 .navbar-cc__link {
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
     line-height: 25px;
     color: rgba(130,73,83,.6);
     text-decoration: none;
@@ -263,5 +280,36 @@ ul.ul-tezone {
 .main-page-category {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.card-digital {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}
+
+.card-body-digital {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
+
+.card-title-digital {
+  margin-bottom: 0.75rem;
+}
+
+.title-section-text {
+    font-size: 35px;
+    line-height: 40px;
+    color: #26547c;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
 }

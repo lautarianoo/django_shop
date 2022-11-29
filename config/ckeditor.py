@@ -34,6 +34,7 @@ CKEDITOR_CONFIGS = {
                 'Preview',
                 'Maximize',
                 'CodeSnippet',
+                'Html5video',
             ]},
         ],
         'toolbar': 'YourCustomToolbarConfig',  # put selected toolbar config here
@@ -61,7 +62,8 @@ CKEDITOR_CONFIGS = {
             'dialogui',
             'elementspath',
             'codesnippet',
-            'youtube'
+            'youtube',
+            'html5video'
         ]),
     },
     'special': {

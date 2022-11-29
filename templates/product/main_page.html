@@ -4,13 +4,14 @@
 {% block title %}Интернет магазин TEZONE - Главная{% endblock title %}
 
 {% block tezone-content %}
-    <div class="container">
-        <div class="main-page-category">
+    <div class="my_container">
+        <h2 class="title-section-text">Категории</h2>
+        <div class="main-page-category" style="margin-top: 50px;">
             {% for category in sub_categories %}
-                <a href="#"><div class="card" style="width: 18rem;">
-                  <img src="{{ category.image.url }}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title" style="text-align: center">{{ category.name }}</h5>
+                <a href="#"><div class="card-digital" style="width: 18rem; text-decoration: none; color: #45484b">
+                  <img src="{{ category.image.url }}" class="card-img-digital" alt="..." width="150" height="150" style="margin-left: 25%">
+                  <div class="card-body-digital">
+                    <h5 class="card-title-digital" style="text-align: center">{{ category.name }}</h5>
                   </div>
                 </div></a>
             {% endfor %}
