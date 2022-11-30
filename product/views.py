@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from src.utils.mixins import CustomerMixin
-from .models import SubCategory, Product
+from .models import SubCategory, Product, Category
 
 class MainPageView(CustomerMixin, View):
 
@@ -20,3 +20,9 @@ class MainPageView(CustomerMixin, View):
         else:
             query = Product.objects.filter(tezone_recommended=True)[:50]
         return render(request, 'product/main_page.html', {'sub_categories': sub_categories, 'rec_product': query[:40]})
+
+class SubCategoryDetail(CustomerMixin, View):
+
+    def get(self, request, *args, **kwargs):
+        category = Category.objects.filter(subcategory=SubCategory.objects.get(slug=kwargs.get("id")))
+        return render(request, 'product/detail_subcategory.html', {'sub_categories': category})
