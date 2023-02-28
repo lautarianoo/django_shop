@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-ASN.mmdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-City.mmdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-Country.mmdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/city_parser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parsers/russian-cities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mixins.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/translation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/translation.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -310,7 +317,7 @@
       <workItem from="1670601368519" duration="3956000" />
       <workItem from="1670664695098" duration="2255000" />
       <workItem from="1670846430363" duration="1216000" />
-      <workItem from="1677582638160" duration="21288000" />
+      <workItem from="1677582638160" duration="22083000" />
     </task>
     <task id="LOCAL-00001" summary="App:company, customer, product. BaseUser model">
       <created>1663086863612</created>
@@ -487,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677604620114</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="req">
+      <created>1677605723488</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1677605723488</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +546,8 @@
     <MESSAGE value="Host" />
     <MESSAGE value="Host-files" />
     <MESSAGE value="requirements" />
-    <option name="LAST_COMMIT_MESSAGE" value="requirements" />
+    <MESSAGE value="req" />
+    <option name="LAST_COMMIT_MESSAGE" value="req" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/django_ozon$views.coverage" NAME="views Coverage Results" MODIFIED="1670131796643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/product" />

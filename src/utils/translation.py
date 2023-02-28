@@ -1,5 +1,3 @@
-from translate import Translator
-
 letters = {'ь':'', 'ъ':'', 'а':'a', 'б':'b','в':'v',
        'г':'g', 'д':'d', 'е':'e', 'ё':'yo','ж':'zh',
        'з':'z', 'и':'i', 'й':'y', 'к':'k', 'л':'l',
@@ -24,9 +22,4 @@ def russian_to_engilsh(text):
             new_text += letters.get(letter)
             continue
         new_text += "-"
-    return new_text
-
-def english_to_russian(text):
-    translator = Translator(from_lang="en", to_lang="ru")
-    new_text = translator.translate(text)
     return new_text
