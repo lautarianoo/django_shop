@@ -1,9 +1,7 @@
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Circe,sans-serif!important;
-    -webkit-font-smoothing: antialiased;
 }
 
 body, html {
@@ -23,6 +21,12 @@ a {
   color:#ff0000;
 }
 
+.wrapper-tezone {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
 .my_container {
     width: 100%;
     max-width: 1255px;
@@ -31,12 +35,6 @@ a {
     font-family: "Circe",sans-serif;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-}
-
-.wrapper-tezone {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
 }
 
 .header-tezone {
@@ -110,7 +108,7 @@ ul.ul-tezone {
 }
 
 .header-tezone-bottom {
-  display: flex;
+    display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 50px;
@@ -120,7 +118,6 @@ ul.ul-tezone {
   position: relative;
   box-sizing: border-box;
   outline: 0;
-  width: 100%;
 }
 
 .block-main-search i {
@@ -146,17 +143,11 @@ ul.ul-tezone {
   margin: 0;
   margin-left: 15px;
   outline: none;
-  background: rgba(255,255,255, .2);
+    background: rgba(255,255,255, .2);
   cursor: pointer;
 
 }
 
-
-.main-search:focus, .main-search:focus:hover {
-    color: #242424;
-    background: #fff;
-    border: 0px;
-}
 
 .main-search:focus {
     cursor: text;
@@ -228,6 +219,12 @@ ul.ul-tezone {
   flex: 0 0 auto;
 }
 
+.element-after:after {
+    content: "";
+    width: 100%;
+    margin: 16px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
 
 .main-footer {
   display: flex;

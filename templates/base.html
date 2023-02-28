@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock title %}</title>
+    <title>Интернет магазин керамических плиток | "КерамПлита"</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
@@ -21,37 +21,29 @@
 <body>
     <div class="wrapper-tezone">
         <header>
-            <div class="header-tezone">
+            <div class="header-tezone" style="background: linear-gradient(to right,#7474BF 0,#348AC7 100%) no-repeat;">
                 <div class="my_container">
                         <div class="header-tezone-top">
-                            <ul class="ul-tezone" style="list-style-type: none;">
-                                {% if request.user.is_authenticated %}
-                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.city }}</a></li>
-                                    <li><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.customer.point_issue.address }}</a></li>
-                                {% elif request.user.is_authenticated and not request.user.customer.point_issue %}
-                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">{{ request.user.city }}</a></li>
-                                    <li><a href="#" style="text-decoration: none; color: #fff2f2;">Выберите пункт выдачи</a></li>
-                                {% else %}
-                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">Город</a></li>
-                                {% endif %}
+                            <ul class="ul-tezone" style="list-style-type: none; display: flex; justify-content: space-between; align-items: center; width: 100%">
+                                    <li><img class="city-location-image" src="{% static "images/location-ico.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">г.Челябинск, ул.Доватора 11, офис 1</a></li>
+                                    <li><img class="city-location-image" src="{% static "images/mail.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">ceramplita@yandex.ru</a></li>
+                                    <li><img class="city-location-image" src="{% static "images/phone-call.png" %}"><a href="#" style="text-decoration: none; color: #fff2f2;">+7(919) 351 16 29</a></li>
                             </ul>
-                            <a href="#" class="btn btn-tezone">Продавайте на TEZONE</a>
                         </div>
                     <div class="header-tezone-bottom">
                                 <div class="nav-elements">
-                                    <button type="button" class="dropdown-nav-btn">
-                                        <img class="dropdown-image" src="{% static "images/main-dropdown.png" %}">
-                                    </button>
-                                    <h1 style="margin-left: 10px; margin-right: 10px; margin-bottom: 0;" class="tezone-text-name">TEZONE</h1>
+                                    <a href="{% url "main_page" %}" style="text-decoration: none; color: white;"><h1 style="margin-left: 10px; margin-right: 10px; margin-bottom: 0;" class="tezone-text-name">КерамПлита</h1></a>
                                 </div>
+                                <form method="get" action="{% url "search" %}" style="width: 100%">
                                 <div class="block-main-search" style="width: 100%">
-                                    <input style="border: 0px;" class="main-search" type="text" name="main-search" placeholder="Искать..">
+                                    <input style="border: 0px; color: white!important;" class="main-search" type="text" name="q" placeholder="Искать.." >
                                     <i class="fa fa-search fa-lg fa-fw" aria-hidden="true"></i>
                                 </div>
+                                </form>
                                 <div class="navbar-items-cc">
                                     <div style="margin-left: 5px" class="navbar-item-cc">
-                                        <a class="navbar-cc__link" href="#">
-                                            <img class="navar-cc__icon" src="{% static "images/user.png" %}">
+                                        <a class="navbar-cc__link" href="#" style="color: white">
+                                            <img class="navar-cc__icon" src="{% static "images/user-white.png" %}">
                                             {% if not request.user.is_authenticated %}
                                                 Войти
                                             {% else %}
@@ -59,15 +51,9 @@
                                             {% endif %}
                                         </a>
                                     </div>
-                                    <div class="navbar-item-cc">
-                                        <a class="navbar-cc__link" href="#">
-                                            <img class="navar-cc__icon" src="{% static "images/orders.png" %}">
-                                            Заказы
-                                        </a>
-                                    </div>   
-                                    <div class="navbar-item-cc">
-                                        <a class="navbar-cc__link" href="#">
-                                            <img class="navar-cc__icon" src="{% static "images/cart.png" %}">
+                                <div class="navbar-item-cc">
+                                        <a class="navbar-cc__link" href="{% url "cart" %}" style="color: white">
+                                            <img class="navar-cc__icon" src="{% static "images/shopping-cart.png" %}">
                                             Корзина
                                         </a>
                                     </div>       
@@ -83,42 +69,10 @@
                 {% endblock tezone-content %}
             </div>
         </main>
-            <footer class="footer-tezone">
+            <footer class="footer-tezone" style="height: auto">
                 <div class="my_container">
-                    <div class="main-footer">
-                        <div class="main-footer__ul">
-                            <h5 class="footer-header">Компания</h5>
-                            <ul class="ul-footer">
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">О нас</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Контакты</a></li>
-                            </ul>    
-                        </div>
-                        <div class="main-footer__ul">
-                            <h5 class="footer-header">Покупателям</h5>
-                            <ul class="ul-footer">
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Как сделать заказ</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Доставка</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Возврат товара</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Возврат денежных средств</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Правила продажи</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Вопросы и ответы</a></li>
-                            </ul>    
-                        </div> 
-                        <div class="main-footer__ul">
-                            <h5 class="footer-header">Категории</h5>
-                            <ul class="ul-footer">
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Электроника</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Одежда</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Обувь</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Бытовая техника</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">Красота и здоровье</a></li>
-                                <li class="ul-footer-item"><a href="#" style="text-decoration: none; color: rgba(255,255,255,.7);">...</a></li>
-                            </ul>    
-                        </div>     
-                    </div>
-                    <hr>
                     <div class="copyright">
-                        <p>2022 © Tezone — интернет-магазин электроники, одежды и многое другое.</p>
+                        <p>2023 © КерамПлита — интернет-магазин керамических плиток.</p>
                         <p>Все права защищены.</p>
                     </div>    
                 </div>    

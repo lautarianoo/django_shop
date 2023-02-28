@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block tezone-content %}
+    {% if not cart.products.all %}
+        <div style="width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center">
+            <h1 style="margin-top: 10%; margin-bottom: 20%">Корзина пуста</h1>
+        </div>
+    {% else %}
+        <div class="my_container" style="margin-bottom: 18%">
+            <h2 class="title-section-text" style="text-align: center; margin-top: 40px; color: black; font-weight: 500; font-size: 38px;">Корзина</h2>
+            <div style="display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    flex-wrap: wrap; margin-top: 5%">
+                <div style="flex-basis: 65%;
+    padding-right: 30px;
+    box-shadow: 10px 0 10px -10px rgb(0 0 0 / 25%);">
+                     {% for product in cart.products.all %}
+                         <div style="display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #7474BF;
+    line-height: 1.2;">
+                            <a href="{% url "product_detail" id=product.id %}" style="display: flex;
+    flex-direction: column;
+    flex-grow: 1;">
+                                <div style="font-size: 14px;
+    color: #404e55;
+    line-height: 17px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: .3s;">
+                                    {{ product.title }}
+                                </div>
+                                <div style="margin-top: 5px;
+    font-size: 12px;
+    color: #8c8c8c!important;">
+                                    Размер: {{ product.size }}
+                                </div>
+                            </a>
+                            <div style="    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;">
+                                <div style="display: flex;
+    flex-direction: row;
+    align-items: center;">
+                                    <div style="display: flex;
+    flex-direction: column;text-align: right;
+    white-space: nowrap;">
+                                        <div style="font-size: 16px; color: #7474BF; font-weight: bold;">
+                                            {{ product.price }} ₽
+                                        </div>
+                                    </div>
+                                    <div style="margin-left: 0.5rem; display: flex;
+    flex-direction: column;">
+                                        <a href="#" style="text-decoration: none; color: black; font-size: 16px;">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                     {% endfor %}
+                </div>
+                <div style="flex-basis: 33%;
+    position: sticky;
+    top: 1.5rem;">
+                    <div style="margin-bottom: 1rem">
+                        <div style="    display: flex!important;     align-items: baseline;">
+                            <p style="flex-basis: 50%;    font-size: 22px;">Итого:</p>
+                            <p style="font-size: 22px;margin-left: auto!important;">
+                                <span style="font-weight: bold; font-size: 32px; color:#7474BF ">{{ cart.total_price }} ₽</span>
+                            </p>
+
+                        </div>
+                        <div style="margin-top: 0.1rem;">
+                            <div style="    display: flex;
+    align-items: center;">
+                                <p style="margin-bottom: 0.2rem;font-size: 16px;">Товары к оплате</p>
+                                <p style="    margin-bottom: 0.2rem; margin-left: auto!important;     font-size: 16px;">{{ cart.products.count }} шт.</p>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 35px; color: white; font-size: 22px; background-color: #7474BF; border: 0;">
+                            Оформить заказ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock tezone-content %}

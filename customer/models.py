@@ -1,6 +1,5 @@
 import sys
 from io import BytesIO
-
 from PIL import Image
 from django.contrib.auth.base_user import BaseUserManager, AbstractBaseUser
 from django.core.files.uploadedfile import InMemoryUploadedFile
@@ -84,7 +83,7 @@ class ShopUser(AbstractBaseUser):
     date_reg = models.DateTimeField(verbose_name="Дата регистрации", auto_now_add=True)
     avatar = models.ImageField(verbose_name="Аватар")
     status_email = models.BooleanField(default=False)
-    city = models.ForeignKey(City, verbose_name="Город", on_delete=models.SET_NULL, related_name="users", null=True)
+    city = models.ForeignKey(City, verbose_name="Город", on_delete=models.SET_NULL, related_name="users", null=True, blank=True)
     is_admin = models.BooleanField(default=False)
     full_name = models.CharField(verbose_name="ФИО", max_length=85)
 
@@ -173,3 +172,16 @@ class Customer(models.Model):
 
     def is_guest(self):
         return self.status == 0
+
+class Cart(models.Model):
+
+    customer = models.OneToOneField(Customer, verbose_name="Покупатель", on_delete=models.CASCADE, related_name="cart")
+    products = models.ManyToManyField("product.Product", verbose_name="Продукты", related_name="cart", blank=True)
+    total_price = models.IntegerField(verbose_name="Конечная цена", default=0)
+
+    def __str__(self):
+        return f"{self.customer.id}"
+
+    class Meta:
+        verbose_name="Корзина"
+        verbose_name_plural="Корзины"
