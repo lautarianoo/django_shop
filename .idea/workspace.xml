@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="2EfLlfOxp6Bg0QyRvxUFT5Bwdi6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\front" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\static\images" />
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\geoip" />
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\src\parsers" />
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\src\utils" />
+      <recent name="C:\Users\cerf\Desktop\Python\Работы и проекты\django_ozon\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Django server.django_ozon">
+    <configuration name="city_parser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/parsers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/parsers/city_parser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fields" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/utils/fields.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/config" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/config/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="translation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/utils/translation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/product" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/product/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="django_ozon" type="Python.DjangoServer" factoryName="Django server">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="config.settings" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cerf\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ozon" type="Python.DjangoServer" factoryName="Django server">
+      <module name="django_ozon" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\cerf\AppData\Local\Programs\Python\Python38\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Django server.ozon" />
+      <item itemvalue="Django server.django_ozon" />
+      <item itemvalue="Python.city_parser" />
+      <item itemvalue="Python.settings" />
+      <item itemvalue="Python.translation" />
+      <item itemvalue="Python.fields" />
+      <item itemvalue="Python.views" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+        <item itemvalue="Python.fields" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.city_parser" />
+        <item itemvalue="Python.translation" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="" />
+      <created>1662981844166</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662981844166</updated>
+      <workItem from="1662981845419" duration="174000" />
+      <workItem from="1662982062231" duration="2425000" />
+      <workItem from="1663069381725" duration="5378000" />
+      <workItem from="1663161067744" duration="597000" />
+      <workItem from="1663170440824" duration="1257000" />
+      <workItem from="1663172055919" duration="2726000" />
+      <workItem from="1663248536290" duration="7760000" />
+      <workItem from="1663486433124" duration="4857000" />
+      <workItem from="1663683132119" duration="611000" />
+      <workItem from="1664199253833" duration="5835000" />
+      <workItem from="1664272261974" duration="12849000" />
+      <workItem from="1664292920664" duration="74000" />
+      <workItem from="1664376169695" duration="1233000" />
+      <workItem from="1664460272440" duration="2286000" />
+      <workItem from="1664465767931" duration="1848000" />
+      <workItem from="1664548782497" duration="4762000" />
+      <workItem from="1664697408787" duration="3145000" />
+      <workItem from="1664804321349" duration="595000" />
+      <workItem from="1664814631708" duration="1228000" />
+      <workItem from="1664889462394" duration="620000" />
+      <workItem from="1665055208199" duration="970000" />
+      <workItem from="1665058183009" duration="594000" />
+      <workItem from="1665060756546" duration="1595000" />
+      <workItem from="1665066862235" duration="195000" />
+      <workItem from="1665074347058" duration="658000" />
+      <workItem from="1665132318550" duration="5087000" />
+      <workItem from="1665140897993" duration="1664000" />
+      <workItem from="1665216511638" duration="622000" />
+      <workItem from="1665218462400" duration="80000" />
+      <workItem from="1665500222846" duration="620000" />
+      <workItem from="1665576866487" duration="7326000" />
+      <workItem from="1665660483685" duration="6515000" />
+      <workItem from="1665823622142" duration="14000" />
+      <workItem from="1665823657131" duration="2571000" />
+      <workItem from="1665909710464" duration="2126000" />
+      <workItem from="1666003739636" duration="805000" />
+      <workItem from="1666089516930" duration="27000" />
+      <workItem from="1666111737876" duration="218000" />
+      <workItem from="1667816940194" duration="142000" />
+      <workItem from="1669649950451" duration="2999000" />
+      <workItem from="1669715448259" duration="6737000" />
+      <workItem from="1669807323702" duration="3356000" />
+      <workItem from="1669910993129" duration="763000" />
+      <workItem from="1669975134516" duration="925000" />
+      <workItem from="1669983983773" duration="6888000" />
+      <workItem from="1670080447098" duration="2769000" />
+      <workItem from="1670131378296" duration="2088000" />
+      <workItem from="1670159808055" duration="825000" />
+      <workItem from="1670231640759" duration="790000" />
+      <workItem from="1670341684844" duration="5145000" />
+      <workItem from="1670403818767" duration="31000" />
+      <workItem from="1670601368519" duration="3956000" />
+      <workItem from="1670664695098" duration="2255000" />
+      <workItem from="1670846430363" duration="1216000" />
+      <workItem from="1677582638160" duration="19264000" />
+    </task>
+    <task id="LOCAL-00001" summary="App:company, customer, product. BaseUser model">
+      <created>1663086863612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1663086863612</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Point issue, Customer (Models)">
+      <created>1663174796765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663174796765</updated>
+    </task>
+    <task id="LOCAL-00003" summary="сity parser + models customer">
+      <created>1663258284826</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663258284826</updated>
+    </task>
+    <task id="LOCAL-00004" summary="сompany/product models">
+      <created>1663686187093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663686187093</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Product models + translate">
+      <created>1664206349269</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1664206349269</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Feature models">
+      <created>1664279556523</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1664279556523</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Began to make catalog">
+      <created>1664292143773</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1664292143773</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Base View Catalog">
+      <created>1664464654591</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1664464654591</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Frontent base.html">
+      <created>1664468893752</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1664468893752</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Base Header">
+      <created>1664561805756</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1664561805756</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Search, dropdown (Header | Frontend)">
+      <created>1664729355943</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1664729355943</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Complete header (Frontend)">
+      <created>1664814650639</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1664814650639</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Complete header (Frontend)">
+      <created>1664814667358</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1664814667358</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Begin make footer (Frontend)">
+      <created>1664896641841</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1664896641841</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Correct mainpage view + footer columns">
+      <created>1665066884154</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1665066884154</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Сomplete base.html (Frontend)">
+      <created>1665076833199</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1665076833199</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Optimizate base.html with static">
+      <created>1665157792458</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1665157792458</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Fix models, mixins, base.html">
+      <created>1665589815496</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1665589815496</updated>
+    </task>
+    <task id="LOCAL-00019" summary="City parser + fix base template">
+      <created>1665680946930</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1665680946930</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Static files upgrade">
+      <created>1669733074923</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1669733074923</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Category Detail">
+      <created>1669830283090</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1669830283090</updated>
+    </task>
+    <task id="LOCAL-00022" summary="керамплита">
+      <created>1677600922332</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677600922333</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="App:company, customer, product. BaseUser model" />
+    <MESSAGE value="Point issue, Customer (Models)" />
+    <MESSAGE value="сity parser + models customer" />
+    <MESSAGE value="сompany/product models" />
+    <MESSAGE value="Product models + translate" />
+    <MESSAGE value="Feature models" />
+    <MESSAGE value="Began to make catalog" />
+    <MESSAGE value="Base View Catalog" />
+    <MESSAGE value="Frontent base.html" />
+    <MESSAGE value="Base Header" />
+    <MESSAGE value="Search, dropdown (Header | Frontend)" />
+    <MESSAGE value="Complete header (Frontend)" />
+    <MESSAGE value="Begin make footer (Frontend)" />
+    <MESSAGE value="Correct mainpage view + footer columns" />
+    <MESSAGE value="Сomplete base.html (Frontend)" />
+    <MESSAGE value="Optimizate base.html with static" />
+    <MESSAGE value="Fix models, mixins, base.html" />
+    <MESSAGE value="City parser + fix base template" />
+    <MESSAGE value="Static files upgrade" />
+    <MESSAGE value="Category Detail" />
+    <MESSAGE value="керамплита" />
+    <option name="LAST_COMMIT_MESSAGE" value="керамплита" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/django_ozon$views.coverage" NAME="views Coverage Results" MODIFIED="1670131796643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/product" />
+    <SUITE FILE_PATH="coverage/django_ozon$settings.coverage" NAME="settings Coverage Results" MODIFIED="1669650233696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/config" />
+    <SUITE FILE_PATH="coverage/django_ozon$translation.coverage" NAME="translation Coverage Results" MODIFIED="1664203091346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/utils" />
+    <SUITE FILE_PATH="coverage/django_ozon$city_parser.coverage" NAME="city_parser Coverage Results" MODIFIED="1665665733098" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/parsers" />
+    <SUITE FILE_PATH="coverage/django_ozon$fields.coverage" NAME="fields Coverage Results" MODIFIED="1669911106070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/utils" />
+  </component>
+</project>
