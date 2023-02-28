@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -314,7 +310,7 @@
       <workItem from="1670601368519" duration="3956000" />
       <workItem from="1670664695098" duration="2255000" />
       <workItem from="1670846430363" duration="1216000" />
-      <workItem from="1677582638160" duration="20120000" />
+      <workItem from="1677582638160" duration="20485000" />
     </task>
     <task id="LOCAL-00001" summary="App:company, customer, product. BaseUser model">
       <created>1663086863612</created>
@@ -477,7 +473,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677603471235</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Host-files">
+      <created>1677604238950</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1677604238950</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -520,7 +523,8 @@
     <MESSAGE value="Category Detail" />
     <MESSAGE value="керамплита" />
     <MESSAGE value="Host" />
-    <option name="LAST_COMMIT_MESSAGE" value="Host" />
+    <MESSAGE value="Host-files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Host-files" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/django_ozon$views.coverage" NAME="views Coverage Results" MODIFIED="1670131796643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/product" />
