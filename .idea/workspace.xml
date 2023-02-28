@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-ASN.mmdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-City.mmdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geoip/GeoLite2-Country.mmdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/city_parser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parsers/russian-cities.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mixins.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/mixins.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/translation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/translation.py" afterDir="false" />
-    </list>
+    <list default="true" id="32a9b528-4be4-4b69-97aa-88ac33c793a5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +308,7 @@
       <workItem from="1670601368519" duration="3956000" />
       <workItem from="1670664695098" duration="2255000" />
       <workItem from="1670846430363" duration="1216000" />
-      <workItem from="1677582638160" duration="22083000" />
+      <workItem from="1677582638160" duration="22565000" />
     </task>
     <task id="LOCAL-00001" summary="App:company, customer, product. BaseUser model">
       <created>1663086863612</created>
@@ -501,7 +492,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677605723488</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="delete lib">
+      <created>1677606477106</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1677606477106</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +520,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="App:company, customer, product. BaseUser model" />
     <MESSAGE value="Point issue, Customer (Models)" />
     <MESSAGE value="сity parser + models customer" />
     <MESSAGE value="сompany/product models" />
@@ -547,7 +544,8 @@
     <MESSAGE value="Host-files" />
     <MESSAGE value="requirements" />
     <MESSAGE value="req" />
-    <option name="LAST_COMMIT_MESSAGE" value="req" />
+    <MESSAGE value="delete lib" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete lib" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/django_ozon$views.coverage" NAME="views Coverage Results" MODIFIED="1670131796643" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/product" />

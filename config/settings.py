@@ -87,10 +87,10 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_ozon',
-        'USER': 'postgres',
-        'PASSWORD': '12345678',
-        'HOST': 'localhost',
+        'NAME': 'lautariano',
+        'USER': 'lautariano',
+        'PASSWORD': 'uNS3CAKjBoFDzM7S9Xp4ESZFPkqHqiIa',
+        'HOST': 'dpg-cfv2gt53t39doavp5el0-a',
         'PORT': '5432'
     }
 }
